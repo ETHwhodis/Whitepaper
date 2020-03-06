@@ -54,7 +54,7 @@ depositsSince = the number of deposits during the elapsed_time (aka since user d
 
 The following formula to determine your AnonymityScore based on the Anonymity_Level you chose.
 
-((elapsed_time * total_time) * 2)+(depositsSince * 20)
+((elapsed_time * total_time) * 2)+(depositsSince * 20))
 
 Deposits are valued by 10x more than time (deposits are multiplied by 20 where as time is multiplied by 2) because the amount of deposits made after the user's deposit enable the user to hide in the smart contract amongst the other depositors.  Because of the spam attack as stated above, as long as such deposits take place over an extended period of time the user can quantifiably anonymize their data transaction.  
 
