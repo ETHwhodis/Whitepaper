@@ -114,7 +114,7 @@ Upon eliminating the attack vectors of the MicroMix approach, it will be possibl
 
 ## Acknowledgements
 
-Made possible discussion barryWhiteHat, Kobi Gurkan, Wei Jie Koh, Roman Semenov and an anonymous ethereum developer.  Grateful for research provided by Tornado.Cash team, the Semaphore team, the Zcash team and the Ethereum Foundation.
+Made possible by discussions with barryWhiteHat, Kobi Gurkan, Wei Jie Koh, Roman Semenov and an anonymous ethereum developer.  Grateful for research provided by Tornado.Cash team, the Semaphore team, the Zcash team and the Ethereum Foundation.
 
 ## License
 
