@@ -16,7 +16,7 @@ The first major privacy solution for ethereum is Tornado.Cash.  It uses zero kno
 
 What is needed is an easy to use, 100% open source privacy solution that quantifies privacy for ethereum transactions, all within a user's work flow.
 
-Building on Tornado.Cash, WHODIS.ETH quantifies a user's privacy based in time and amount of deposits through a new standard: AnonymityScore. In addition, WHODIS.ETH provides a user friendly interface to automatically generate provably unused, non-custodial ethereum addresses locally, within the browser as hosted on the Interplanetary File System (IPFS). 
+Building on Tornado.Cash, WHODIS.ETH quantifies a user's privacy based in time and amount of deposits through a new standard: AnonymityScore. In addition, WHODIS.ETH provides several other user friendly features to optimize workflow.
 
 ## 2 Design Approach
 
@@ -98,7 +98,7 @@ A key goal of WHODIS.ETH is for anyone with internet access to easily practice g
 
 #### 2.4 Receiver Address (Withdraw)
 
-WHODIS.ETH provides the unique ability to generate a new, unused, non-custodial address locally, within the browser.  
+WHODIS.ETH provides the unique ability to generate a new, non-custodial address without leaving the browser.  
 
 ![image](https://user-images.githubusercontent.com/59490498/76042030-ab41d800-5f21-11ea-9938-3c24f6bee217.png)
 
