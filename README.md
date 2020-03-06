@@ -122,7 +122,7 @@ GNU General Public License v3.0
 
 ## References
 
-Alexey Pertsev, Roman Semenov, Roman Storm.  Tornado Cash Privacy Solution, Version 1.4 (December 2019).
+Alexey Pertsev, Roman Semenov, Roman Storm.  Tornado Cash Privacy Solution, Version 1.4, https://tornado.cash/Tornado.cash_whitepaper_v1.4.pdf (December 2019).
 
 Wie Jie Koh.  MicroMix, https://github.com/weijiekoh/mixer (2019).
 
