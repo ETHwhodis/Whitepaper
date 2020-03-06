@@ -30,8 +30,7 @@ WHODIS.ETH uses the Tornado smart contract and circuit, therefore providing a pr
 
 Key Assumption: The more time that elapses between deposits, the more likely it is that such deposits are from separate users.  Therefore, the more deposits that accumulate over a longer period of time, the greater the anonymity set becomes.  We quantify this as AnonymityScore:
 
-[insert anonymity Score]
-
+![image](https://user-images.githubusercontent.com/59490498/76040140-9282f380-5f1c-11ea-9ac0-f64b6efbd3d4.png)
 The AnonymityScore is a function of the Anonymity_Level chosen by a user.  
 
 #### 2.2 Anonymity_Level 
@@ -53,37 +52,59 @@ elapsed_time = amount of time since user's deposit.
 
 depositsSince = the number of deposits during the elapsed_time (aka since user deposited).  
 
-We use the following formula to determine your AnonymityScore based on the Anonymity_Level you chose.
+The following formula to determine your AnonymityScore based on the Anonymity_Level you chose.
 
 ((elapsed_time * total_time) * 2)+(depositsSince * 20)
 
-Deposits are valued by 10x more than time (deposits are multiplied by 20 where as time is multiplied by 2) because the amount of deposits made after the user's deposit enable the user to hide in the smart contract amongst the other depositors.  Because of the spam attack as stated above, as long as such deposits take place over an extended period of time the user can quantifiably anonymize his data transaction.  Briefly, when you get less deposits, it will take more time than estimated to reach the chosen Anonymity_Level.  When you get more deposits, it will take less time to reach the chosen Anonymity_Level.  
+Deposits are valued by 10x more than time (deposits are multiplied by 20 where as time is multiplied by 2) because the amount of deposits made after the user's deposit enable the user to hide in the smart contract amongst the other depositors.  Because of the spam attack as stated above, as long as such deposits take place over an extended period of time the user can quantifiably anonymize their data transaction.  
 
-This formula is illustrated through the following examples for the Anonymity_Level of Low, Medium and High:
+This formula is illustrated through the following examples for the Anonymity_Level of:
 
-[insert excel screen shots]
+#### Low
+
+![image](https://user-images.githubusercontent.com/59490498/76040388-29e84680-5f1d-11ea-9398-82d77e23cb5e.png)
+
+#### Medium
+
+![image](https://user-images.githubusercontent.com/59490498/76040404-37053580-5f1d-11ea-9ce8-722f350e9f0d.png)
+
+#### High
+
+![image](https://user-images.githubusercontent.com/59490498/76040417-43898e00-5f1d-11ea-951b-aaab09aa78ff.png)
 
 The AnonymityScore increases for each Anonymity_Level the more time that elapses and the more deposits that are made. 
 
-[insert screen shot of % progress and anonymity score]
+![image](https://user-images.githubusercontent.com/59490498/76040114-7da66000-5f1c-11ea-821e-6c412a04e957.png)
 
-There is an option to "withdraw now" - before the Anonymity_Level progress reaches 100%.  If the "withdraw now" button is used, beware that your privacy cannot be 100% guaranteed.
+Briefly, when you get less deposits, it will take more time than estimated to reach the chosen Anonymity_Level.  
+
+![image](https://user-images.githubusercontent.com/59490498/76040092-67000900-5f1c-11ea-8c66-8d71761e48d5.png)
+
+When you get more deposits, it will take less time to reach the chosen Anonymity_Level.  
+
+![image](https://user-images.githubusercontent.com/59490498/76040040-37e99780-5f1c-11ea-959e-67add788029d.png)
+
+There is an option to "withdraw now" - before the Anonymity_Level progress reaches 100%.  If the "withdraw now" button is used, the below prompt will come up - beware that your privacy cannot be 100% guaranteed.  
+
+![image](https://user-images.githubusercontent.com/59490498/76040880-91eb5c80-5f1e-11ea-9ada-f33a5f41b284.png)
 
 #### 2.3 zkSnark Work Flows
 
 In Tornado.Cash, in order to deposit into the smart contract, the user must generate a "Note" aka secret to an unspent commitment from the smart contract's list of deposits.  The Note contains the data that can be used to provably link a users deposit with withdrawal.  zkSnark technology allows this to happen without revealing which deposit corresponds to this secret and therefore the withdrawal.  Tornado.Cash requires backing up the Note's data and then inputting the Note before withdrawal (this allows the smart contract to check the proof and transfer the deposited funds to the address specified for withdrawal).  If the Note's data is lost or stolen, the ETH is gone forever.  The Note is essentially the private key.  This approach has resulted in approximately 4 million Bitcoin and a corresponding amount of ETH, ERC-20 tokens and many more cryptocurrencies being lost forever.
 
-A key goal of WHODIS.ETH is for anyone with internet access to easily practice good data hygiene on the ethereum blockchain - all within their workflow.  We provide the ability for the Note to automatically be generated and stored locally (like as in Metamask), never on the browser, such that the user does not have to consider backing up the Note orlosing his funds because of losing the Note or having it stolen.  Notably, the user is provided the option to view and backup the Note, but this is unnecessary and may provide significant attack vectors as previously stated.
+A key goal of WHODIS.ETH is for anyone with internet access to easily practice good data hygiene on the ethereum blockchain - all within their workflow and without risk of losing their funds.  We provide the ability for the Note to automatically be generated and stored locally (like as in Metamask), never on the browser, such that the user does not have to consider backing up the Note or losing his funds because of losing the Note or having it stolen.  Notably, the user is provided the option to view and backup the Note, but this is unnecessary and may provide significant attack vectors as previously stated.
 
 #### 2.4 Receiver Address (Withdraw)
 
-After a user has achieved a 100% score, to ensure privacy, the ETH can either stay in the smart contract or the ETH MUST be withdrawn through a relayer to an unused ethereum address.  If a relayer is not used, your privacy cannot be 100% guaranteed.  WHODIS.ETH provides the option to use a relayer and more importantly, the unique ability to generate a new, unused address locally, within the browser.  It is highly recommended that the user takes advantadge of this feature.  The other option is for the user to generate a new ethereum address on their own (e.g. mycrypto, mew, metamask, rainbow, trust wallet, etc.).  If the user does not generate a new, unused address and instead withdraws the ETH to a previously used ethereum address, the transaction may no longer be private.
+WHODIS.ETH provides the unique ability to generate a new, unused, non-custodial address locally, within the browser.  It is highly recommended that the user takes advantadge of this feature.  The other option is for the user to generate a new ethereum address on their own (e.g. mycrypto, mew, metamask, rainbow, trust wallet, etc.).  If the user does not generate a new, unused address and instead withdraws the ETH to a previously used ethereum address, privacy guarantees are compromised.
+
+After a user has achieved a 100% score, to ensure privacy, the ETH can either stay in the smart contract (builds the Tornado.Cash anonymity set) or the ETH MUST be withdrawn through a relayer to an unused ethereum address.  If a relayer is not used, your privacy cannot be 100% guaranteed.  WHODIS.ETH provides the option to use a relayer.
 
 ## 3 Comparisons + Future Work
 
-In addition to Tornado.Cash, MicroMix also uses zkSnarks to mix transaction data.  The UI hides the anonymity set and encourages users to wait until midnight UTC to withdraw.  It is important for the user to know how many depositers, over what period of time, deposited into the smart contract.  Without this information the user cannot be assured of his privacy guarantees.  In addition, the withdrawal at midnight UTC likely poses the same issue as Tornado describes in 1(A) above.  A more ideal improvement to that approach would be the ability to programmably "schedule" those transactions will be submitted by the relayer at midnight UTC (similar to a time lock-unlock).  This way it is unknown who withdrew what, because it all happened at the same time.    New potential attack vectors should be considered with this approach.
+In addition to Tornado.Cash, MicroMix (Kovan Testnet) also uses zkSnarks to mix transaction data.  The UI hides the anonymity set and encourages users to wait until midnight UTC to withdraw.  It is important for the user to know how many depositers, over what period of time, deposited into the smart contract - the anonymity set.  Without this information the user cannot be assured of his privacy guarantees.  In addition, the withdrawal at midnight UTC likely poses the same issue as Tornado describes in 1(A) above.  A more ideal improvement would be the ability to programmably "schedule" those transactions to be submitted by the relayer at midnight UTC (similar to a time lock-unlock).  This way it is unknown who withdrew what, because it all happened at the same time.    New potential attack vectors should be considered with this approach.
 
-Upon eliminating the attack vectors of the MicroMix approach, it will be possible to create a defi * privacy operation, akin to PoolTogether.  Notably, users are encouraged to leave deposits in the smart contract as long as possible to grow the anonymity set.  Deposits would be required to enter by a certain time and withdrawals would have to happen within a certain time period - incentivizing non-withdrawal.  An anonymous version of PoolTogether can result various political, financial and social solutions. This is early research.  All attack vectors must be considered.  
+Upon eliminating the attack vectors of the MicroMix approach, it will be possible to create a defi * privacy operation, akin to PoolTogether.  Notably, users are encouraged to leave deposits in the smart contract as long as possible to grow the anonymity set.  Deposits would be required to enter by a certain time and withdrawals would have to happen within a certain time period (for payouts) - incentivizing non-withdrawal.  An anonymous version of PoolTogether can result various political, financial and social solutions. This is early research.  All attack vectors must be considered.  
 
 ## Acknowledgements
 
