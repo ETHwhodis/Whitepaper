@@ -26,7 +26,7 @@ The end state requirement for a provably anonymous on-chain ETH transaction is t
 
 WHODIS.ETH uses the Tornado smart contract and circuit, therefore providing a predefined deposit anonymity set and audited codebase.  The more deposits that enter the Tornado smart contract (that do not withdraw), the greater the anonymity set becomes - unless it is spammed by desposits from the same account or linked accounts.  
 
-#### 2.1 Anonymity Score
+#### 2.1 AnonymityScore
 
 Key Assumption: The more time that elapses between deposits, the more likely it is that such deposits are from separate users.  Therefore, the more deposits that accumulate over a longer period of time, the greater the anonymity set becomes.  We quantify this as AnonymityScore:
 
