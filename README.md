@@ -1,5 +1,7 @@
 # Whitepaper
 
+whodis.eth.link@protonmail.com
+
 ## 1 Problem Statement
 
 There are significant issues in data privacy including but not limited to political, financial and social.  While blockchains facilitate human coordination, they are susceptible to mass surveillance by bad actors.  According to Vitalik Buterin, "Currently there are large privacy problems in the ethereum ecosystem. The default behavior is to do everything through a single account, which allows all of a user’s activities to be publicly linked to each other. It seems like this can be improved by using multiple addresses, but not really: the transactions you make to send ETH to those addresses themselves reveal the link between them...  This greatly hinders adoption of many applications..." 
