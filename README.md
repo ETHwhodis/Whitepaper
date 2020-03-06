@@ -54,7 +54,7 @@ elapsed_time = amount of time since user's deposit.
 
 depositsSince = the number of deposits during the elapsed_time (aka since user deposited).  
 
-The following formula to determine your AnonymityScore based on the Anonymity_Level you chose.
+The following formula determines your AnonymityScore based on the Anonymity_Level you chose.
 
 ((elapsed_time * total_time) * 2)+(depositsSince * 20))
 
