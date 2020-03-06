@@ -86,7 +86,7 @@ When you get more deposits, it will take less time to reach the chosen Anonymity
 
 ![image](https://user-images.githubusercontent.com/59490498/76040040-37e99780-5f1c-11ea-959e-67add788029d.png)
 
-There is an option to "withdraw now" - before the Anonymity_Level progress reaches 100%.  If the "withdraw now" button is used, the below prompt will come up - beware that your privacy cannot be 100% guaranteed.  
+There is an option to "withdraw now" - before the Anonymity_Level progress reaches 100%.  If the "withdraw now" button is used, the below prompt will come up.  This is a warning that the "withdraw now" buttom cannot 100% guarantee your privacy.  
 
 ![image](https://user-images.githubusercontent.com/59490498/76040880-91eb5c80-5f1e-11ea-9ada-f33a5f41b284.png)
 
